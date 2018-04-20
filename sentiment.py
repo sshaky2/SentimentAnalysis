@@ -10,10 +10,9 @@ nltk.download('vader_lexicon')
 app = Flask(__name__)
 
 
-@app.route("/", methods=['POST'])
-def get_score():
-    sid = SentimentIntensityAnalyzer()
-    return jsonify(sid.polarity_scores(request.data.decode(encoding='UTF-8')))
+@app.route("/")
+def hello():
+    return "Hello World!"
 
 
 if __name__ == '__main__':
