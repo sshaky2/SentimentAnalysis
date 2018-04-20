@@ -1,1 +1,1 @@
-web: python sentiment.py 
+web: python sentiment.py runserver 0.0.0.0
