@@ -1,1 +1,1 @@
-web: python sentiment.py --log-file -
+worker: python sentiment.py --log-file -
