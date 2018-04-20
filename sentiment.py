@@ -1,12 +1,19 @@
+import nltk
+from flask import Flask, jsonify, request
+#from nltk import tokenize, punkt
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-from flask import Flask
+
+nltk.download('punkt')
+nltk.download('vader_lexicon')
 
 app = Flask(__name__)
 
 
-@app.route("/")
-def hello():
-    return "Hello World!"
+@app.route("/", methods=['POST'])
+def get_score():
+    sid = SentimentIntensityAnalyzer()
+    return jsonify(sid.polarity_scores(request.data.decode(encoding='UTF-8')))
 
 
 if __name__ == '__main__':
