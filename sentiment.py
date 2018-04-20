@@ -1,6 +1,5 @@
 import nltk
 from flask import Flask, jsonify, request
-#from nltk import tokenize, punkt
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 
