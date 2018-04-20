@@ -10,7 +10,7 @@ nltk.download('vader_lexicon')
 app = Flask(__name__)
 
 
-@app.route("/sentiment", methods=['POST'])
+@app.route("/", methods=['POST'])
 def get_score():
     sid = SentimentIntensityAnalyzer()
     return jsonify(sid.polarity_scores(request.data.decode(encoding='UTF-8')))
