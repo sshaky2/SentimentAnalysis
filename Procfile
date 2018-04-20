@@ -1,1 +1,1 @@
-web: gunicorn sentiment:app --log-file -
+web: python sentiment.py runserver 0.0.0.0:5000
