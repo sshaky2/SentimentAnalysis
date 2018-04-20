@@ -1,1 +1,1 @@
-web: python sentiment.py --log-file -
+web: gunicorn sentiment:app --log-file -
