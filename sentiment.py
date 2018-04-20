@@ -13,7 +13,7 @@ app = Flask(__name__)
 def get_score():
     text = request.data.decode(encoding='UTF-8')
     if (not text):
-        return '<h1>In order to calculate the sentiment score, you need to HTTP POST the body with text to this address.</h1><br> \
+        return '<h1>In order to calculate the sentiment score, you need to HTTP POST the body with raw text to this address.</h1><br> \
         Score is returned in form of JSON object. Compound score is the average score which ranges from -1 to +1. -1 being most negative and \
         +1 being most positive.'
     else:
