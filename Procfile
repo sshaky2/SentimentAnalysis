@@ -1,1 +1,1 @@
-web: python sentiment:app
+web: gunicorn gettingstarted.wsgi

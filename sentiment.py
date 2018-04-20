@@ -1,11 +1,5 @@
-import nltk
-from flask import Flask, jsonify, request
-#from nltk import tokenize, punkt
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-
-nltk.download('punkt')
-nltk.download('vader_lexicon')
+from flask import Flask
 
 app = Flask(__name__)
 
