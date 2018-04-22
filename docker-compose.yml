@@ -1,8 +1,6 @@
 version: '3'
 services:
   web:
-    build: .
+    build: https://github.com/sshaky2/SentimentAnalysis.git
     ports:
      - "5000:5000"
-  redis:
-    image: "redis:alpine"
